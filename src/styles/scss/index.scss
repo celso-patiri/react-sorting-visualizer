@@ -1,0 +1,14 @@
+@use 'config';
+
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+:root {
+	background-color: config.$background;
+	color: config.$text-color;
+}
