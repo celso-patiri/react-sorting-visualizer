@@ -1,10 +1,13 @@
-import { useContext } from 'react';
-import { ArrayContext } from '../../context/ArrayContext';
+import ArrayContainer from '../ArrayContainer/ArrayContainer';
+import ArraySlider from '../ArraySlider/ArraySlider';
 
 import './Main.scss';
 
 export default function Main() {
-	const { array } = useContext(ArrayContext);
-
-	return <main>ArrayContainer: {array}</main>;
+	return (
+		<main>
+			<ArrayContainer />
+			<ArraySlider />
+		</main>
+	);
 }

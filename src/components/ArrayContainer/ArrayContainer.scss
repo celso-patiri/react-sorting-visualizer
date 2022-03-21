@@ -1,0 +1,7 @@
+@use '../../scss/utils' as utils;
+
+.array-container {
+	@include utils.flex;
+	align-items: flex-end;
+	gap: 3px;
+}

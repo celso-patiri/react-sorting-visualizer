@@ -1,24 +1,17 @@
-@use '../../styles/scss/config' as config;
-
-@mixin test-bg {
-	background-color: lighten(config.$background, $amount: 20);
-	border: 1px solid rgb(136, 136, 136);
-}
+@use '../../scss/utils' as utils;
 
 nav {
-	width: 100vw;
-	height: 5vh;
+	@include utils.w-h(100vw, 5vh);
 	position: absolute;
 	top: 0;
-	@include test-bg();
+	@include utils.test-bg();
 }
 
 footer {
-	height: 5vh;
-	width: 100%;
+	@include utils.w-h(100%, 5vh);
 	position: absolute;
 	bottom: 0;
-	@include test-bg();
+	@include utils.test-bg();
 }
 
 div.main-container {

@@ -1,4 +1,4 @@
-@use 'config';
+@use 'utils';
 
 *,
 *::after,
@@ -9,6 +9,6 @@
 }
 
 :root {
-	background-color: config.$background;
-	color: config.$text-color;
+	background-color: utils.$background;
+	color: utils.$text-color;
 }

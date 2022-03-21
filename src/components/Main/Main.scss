@@ -1,3 +1,11 @@
+@use '../../scss/utils' as utils;
+
 main {
-	width: 100%;
+	@include utils.w-h(100%, 100%);
+	@include utils.flex-column;
+
+	.array-container {
+		@include utils.w-h(100%, 90%);
+		@include utils.test-bg(5);
+	}
 }
