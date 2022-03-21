@@ -2,17 +2,33 @@ import React, { createContext, useState } from 'react';
 
 interface IArrayContext {
 	array: number[];
-	setArray?: any;
+	changeArray: (array: number[]) => void;
+	swap: (i: number, j: number) => void;
 }
 
-type ArrayProviderProps = {
-	children: React.ReactNode;
-};
+export const ArrayContext = createContext<IArrayContext>({
+	array: [],
+	changeArray: () => {},
+	swap: () => {},
+});
 
-export const ArrayContext = createContext<IArrayContext>({ array: [] });
+export const ArrayContextProvider: React.FC = ({ children }) => {
+	const [array, setArray] = useState([] as number[]);
 
-export const ArrayContextProvider = ({ children }: ArrayProviderProps) => {
-	const [array, setArray] = useState([1]);
+	function changeArray(newArray: number[]) {
+		setArray(newArray);
+	}
 
-	return <ArrayContext.Provider value={{ array, setArray }}>{children}</ArrayContext.Provider>;
+	function swap(i: number, j: number) {
+		const aux = array[i];
+		array[i] = array[j];
+		array[j] = aux;
+		setArray([...array]);
+	}
+
+	return (
+		<ArrayContext.Provider value={{ array, changeArray, swap }}>
+			{children}
+		</ArrayContext.Provider>
+	);
 };
