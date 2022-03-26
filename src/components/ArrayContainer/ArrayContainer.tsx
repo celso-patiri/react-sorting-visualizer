@@ -8,8 +8,8 @@ export default function ArrayContainer() {
 
 	return (
 		<div className="array-container">
-			{array.map((value) => (
-				<ArrayBar height={value} />
+			{array.map((value, index) => (
+				<ArrayBar height={value} key={value.toString() + index} />
 			))}
 		</div>
 	);

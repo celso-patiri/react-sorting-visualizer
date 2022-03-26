@@ -9,8 +9,13 @@ export default function ArraySlder() {
 			thumbClassName="example-thumb"
 			trackClassName="example-track"
 			defaultValue={50}
+			onChange={handleChange}
 			min={5}
 			max={100}
 		/>
 	);
+
+	function handleChange(value: number) {
+		console.log(value);
+	}
 }
