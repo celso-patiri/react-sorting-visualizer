@@ -1,13 +1,19 @@
 import { useContext } from 'react';
+import styled from 'styled-components';
 import { ArrayContext } from '../../context/ArrayContext';
-import './Sidebar.scss';
 
 export default function Sidebar() {
 	const { randomizeArray } = useContext(ArrayContext);
 
 	return (
-		<aside>
+		<Aside>
 			<button onClick={randomizeArray}>Shuffle</button>
-		</aside>
+		</Aside>
 	);
 }
+
+const Aside = styled.aside`
+	width: 4vw;
+	background-color: rgb(151, 151, 151);
+	border: 1px solid #888888;
+`;
