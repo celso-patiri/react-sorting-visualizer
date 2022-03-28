@@ -18,6 +18,7 @@ export default function ArrayContainer() {
 const Container = styled.div`
 	display: flex;
 	justify-content: center;
+	height: 100%;
 	max-width: 96vw;
 	align-items: flex-end;
 	gap: 3px;

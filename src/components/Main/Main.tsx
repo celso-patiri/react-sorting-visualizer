@@ -13,7 +13,7 @@ export default function Main() {
 
 const Container = styled.main`
 	width: 100%;
-	height: 90%;
+	height: 100%;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
