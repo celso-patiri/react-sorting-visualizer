@@ -44,11 +44,5 @@ const StyledTrack = styled.div`
 	bottom: 0;
 	height: 1vh;
 	background: blue;
-	/* border-radius: 999px; */
-	border-radius: 100px;
-`;
-
-const StyledSlider = styled(ReactSlider)`
-	width: 100%;
-	height: 25px;
+	border-radius: 999px;
 `;
