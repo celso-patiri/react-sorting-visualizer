@@ -1,0 +1,4 @@
+.horizontal-slider {
+	width: clamp(100px, 85%, 850px);
+	margin-top: 2vh;
+}

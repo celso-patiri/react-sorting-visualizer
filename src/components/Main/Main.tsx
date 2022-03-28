@@ -1,13 +1,20 @@
+import styled from 'styled-components';
 import ArrayContainer from '../ArrayContainer/ArrayContainer';
 import ArraySlider from '../ArraySlider/ArraySlider';
 
-import './Main.scss';
-
 export default function Main() {
 	return (
-		<main>
+		<Container>
 			<ArrayContainer />
 			<ArraySlider />
-		</main>
+		</Container>
 	);
 }
+
+const Container = styled.main`
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+`;
